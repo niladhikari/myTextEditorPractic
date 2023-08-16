@@ -1,14 +1,49 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MY Text Editor</title>
-</head>
-<body>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.5.1/dist/full.css" rel="stylesheet" type="text/css" />
 
-    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .fa-solid{
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body class="bg-blue-300 max-w-4xl m-auto">
+    <h1 class=" text-center text-4xl font-bold mt-16">My Text Editor</h1>
+    <div class="max-w-2xl m-auto mb-6 ">
+        <nav class="bg-blue-50 grid m-auto mt-6">
+            <div class="flex gap-6 justify-around mt-12">
+                <div class="flex gap-6">
+                    <i id="bold-btn" class="fa-solid fa-bold"></i>
+                    <i id="itlic-btn" class="fa-solid fa-i"></i>
+                    <i id="underLine-btn" class="fa-solid fa-u"></i>
+                </div>
+                <div class="flex gap-6">
+                    <i id="left-btn" class="fa-solid fa-align-left"></i>
+                    <i id="center-btn" class="fa-solid fa-bars"></i>
+                    <i id="right-btn" class="fa-solid fa-align-right"></i>
+                </div>
+                <div class="flex gap-6">
+                    <input type="color" id="colorPicker">
+                    <input type="number" id="size-Input" min="10" max="50" step="1" class="bg-blue-300">
+                    <i class="fa-solid fa-align-right"></i>
+                </div>
+            </div>
+            <textarea class="mt-4 pb-6" name="" id="input-field" cols="85" rows="10"></textarea>
+        </nav>
+    </div>
     <script src="/textEdit.js"></script>
 </body>
+
 </html>
